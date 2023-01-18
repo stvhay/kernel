@@ -66,6 +66,25 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	rock-5b-rpi-camera-v2.dtbo \
 	rock-5b-sata.dtbo \
 	rockchip-rk3588-opi5-sata.dtbo \
+	rockchip-rk3588-opi5-can1-m1.dtbo \
+	rockchip-rk3588-opi5-can2-m1.dtbo \
+	rockchip-rk3588-opi5-i2c1-m2.dtbo \
+	rockchip-rk3588-opi5-i2c1-m4.dtbo \
+	rockchip-rk3588-opi5-i2c3-m0.dtbo \
+	rockchip-rk3588-opi5-i2c5-m3.dtbo \
+	rockchip-rk3588-opi5-lcd1.dtbo \
+	rockchip-rk3588-opi5-lcd2.dtbo \
+	rockchip-rk3588-opi5-pwm0-m1.dtbo \
+	rockchip-rk3588-opi5-pwm1-m1.dtbo \
+	rockchip-rk3588-opi5-pwm1-m2.dtbo \
+	rockchip-rk3588-opi5-pwm3-m0.dtbo \
+	rockchip-rk3588-opi5-pwm3-m2.dtbo \
+	rockchip-rk3588-opi5-pwm15-m2.dtbo \
+	rockchip-rk3588-opi5-spi4-m0-cs1-spidev.dtbo \
+	rockchip-rk3588-opi5-uart0-m2.dtbo \
+	rockchip-rk3588-opi5-uart1-m1.dtbo \
+	rockchip-rk3588-opi5-uart3-m0.dtbo \
+	rockchip-rk3588-opi5-uart4-m0.dtbo \
 
 dtbotxt-$(CONFIG_ARCH_ROCKCHIP) += \
 	README.rockchip-overlays
