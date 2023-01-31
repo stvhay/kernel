@@ -41,6 +41,16 @@
 		vin-supply = <&vcc5v0_sys>;
 	};
 
+	hdmi0_sound: hdmi0-sound {
+		status = "okay";
+		compatible = "rockchip,hdmi";
+		rockchip,mclk-fs = <128>;
+		rockchip,card-name = "rockchip-hdmi0";
+		rockchip,cpu = <&i2s5_8ch>;
+		rockchip,codec = <&hdmi0>;
+		rockchip,jack-det;
+	};
+
 	leds: gpio-leds {
 		compatible = "gpio-leds";
 		pinctrl-names = "default";
@@ -90,13 +100,10 @@
 &hdmi0 {
 	enable-gpios = <&gpio4 RK_PB6 GPIO_ACTIVE_HIGH>;
 	status = "okay";
+	cec-enable = "true";
 };
 
 &hdmi0_in_vp0 {
-	status = "okay";
-};
-
-&hdmi0_sound {
 	status = "okay";
 };
 
