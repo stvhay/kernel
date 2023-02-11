@@ -771,6 +771,12 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning,frame-address,)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, format-truncation)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, format-overflow)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, address-of-packed-member)
+KBUILD_CFLAGS   += $(call cc-disable-warning, misleading-indentation)
+KBUILD_CFLAGS   += $(call cc-disable-warning, array-compare)
+KBUILD_CFLAGS   += $(call cc-disable-warning, stringop-overread)
+KBUILD_CFLAGS   += $(call cc-disable-warning, dangling-pointer)
+KBUILD_CFLAGS   += $(call cc-disable-warning, address)
+
 
 ifdef CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE
 KBUILD_CFLAGS += -O2
