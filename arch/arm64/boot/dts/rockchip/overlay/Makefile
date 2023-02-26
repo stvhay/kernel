@@ -85,6 +85,7 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	rockchip-rk3588-opi5-uart1-m1.dtbo \
 	rockchip-rk3588-opi5-uart3-m0.dtbo \
 	rockchip-rk3588-opi5-uart4-m0.dtbo \
+	rockchip-rk3588-opi5-wifi-ap6275p.dtbo \
 
 dtbotxt-$(CONFIG_ARCH_ROCKCHIP) += \
 	README.rockchip-overlays
