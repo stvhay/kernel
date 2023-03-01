@@ -1,5 +1,8 @@
 # SPDX-License-Identifier: GPL-2.0
 dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
+	orangepi-5-lcd1.dtbo \
+	orangepi-5-lcd2.dtbo \
+	orangepi-5-sata.dtbo \
 	rk3588-i2c0-m1.dtbo \
 	rk3588-i2c1-m0.dtbo \
 	rk3588-i2c2-m4.dtbo \
@@ -54,15 +57,15 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	rock-5a-hdmi-8k.dtbo \
 	rock-5a-i2c5-rtc-hym8563.dtbo \
 	rock-5a-radxa-camera-4k.dtbo \
-	rock-5a-radxa-display-8hd.dtbo \
 	rock-5a-radxa-display-10hd.dtbo \
+	rock-5a-radxa-display-8hd.dtbo \
 	rock-5a-spi-nor-flash.dtbo \
 	rock-5a-usb-otg.dtbo \
 	rock-5b-hdmi1-8k.dtbo \
 	rock-5b-hdmi2-8k.dtbo \
 	rock-5b-pd-max-voltage-12v.dtbo \
-	rock-5b-radxa-display-8hd.dtbo \
 	rock-5b-radxa-display-10hd.dtbo \
+	rock-5b-radxa-display-8hd.dtbo \
 	rock-5b-rpi-camera-v2.dtbo \
 	rock-5b-sata.dtbo \
 	rockchip-rk3588-opi5-sata.dtbo \
@@ -86,6 +89,7 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	rockchip-rk3588-opi5-uart3-m0.dtbo \
 	rockchip-rk3588-opi5-uart4-m0.dtbo \
 	rockchip-rk3588-opi5-wifi-ap6275p.dtbo \
+	rockchip-rk3588-opp-oc-24ghz.dtbo
 
 dtbotxt-$(CONFIG_ARCH_ROCKCHIP) += \
 	README.rockchip-overlays
