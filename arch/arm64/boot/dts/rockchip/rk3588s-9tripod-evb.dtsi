@@ -765,6 +765,12 @@
 		};
 	};
 
+	dp {
+		dp0_hpd: dp0-hpd {
+			rockchip,pins = <1 RK_PD5 RK_FUNC_GPIO &pcfg_pull_none>;
+		};
+	};
+
 	headphone {
 		hp_det: hp-det {
 			rockchip,pins = <4 RK_PA7 RK_FUNC_GPIO &pcfg_pull_none>;
@@ -816,6 +822,7 @@
 			rockchip,pins = <0 RK_PC4 RK_FUNC_GPIO &pcfg_pull_up>;
 		};
 
+		// CAN I ENABLE THIS?
 		//typec5v_pwren: typec5v-pwren {
 		//	rockchip,pins = <1 RK_PA1 RK_FUNC_GPIO &pcfg_pull_none>;
 		//};
@@ -1058,6 +1065,7 @@
 
 &u2phy2 {
 	status = "okay";
+	rockchip,typec-vbus-det;
 };
 
 &u2phy2_host {
