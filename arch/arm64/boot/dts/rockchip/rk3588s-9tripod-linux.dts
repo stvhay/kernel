@@ -14,4 +14,6 @@
 / {
 	model = "9tripod rk3588s Board";
 	compatible = "9tripod,rk3588s", "rockchip,rk3588";
+
+	/delete-node/ chosen;
 };
