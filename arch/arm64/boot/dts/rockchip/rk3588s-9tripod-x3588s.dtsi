@@ -236,21 +236,26 @@
 	status = "okay";
 };
 
-&sdio {
-	max-frequency = <100000000>;
-	no-sd;
-	no-mmc;
-	bus-width = <4>;
-	disable-wp;
-	cap-sd-highspeed;
-	cap-sdio-irq;
-	keep-power-in-suspend;
-	mmc-pwrseq = <&sdio_pwrseq>;
-	non-removable;
-	pinctrl-names = "default";
-	pinctrl-0 = <&sdiom1_pins>;
-	sd-uhs-sdr104;
-	status = "okay";
+// ethernet
+&gmac1 {
+    phy-mode = "rgmii-rxid";
+    clock_in_out = "output";
+
+    snps,reset-gpio = <&gpio3 RK_PB7 GPIO_ACTIVE_LOW>;
+    snps,reset-active-low;
+	/* Reset time is 20ms, 100ms for rtl8211f */
+    snps,reset-delays-us = <0 20000 100000>;
+    pinctrl-names = "default";
+    pinctrl-0 = <&gmac1_miim
+        &gmac1_tx_bus2
+        &gmac1_rx_bus2
+        &gmac1_rgmii_clk
+        &gmac1_rgmii_bus
+        >;
+    tx_delay = <0x3a>;
+    rx_delay = <0x00>;
+    phy-handle = <&rgmii_phy1>;
+    status = "okay";
 };
 
 &i2c0 {
@@ -442,6 +447,13 @@
 
 };
 
+&mdio1 {
+    rgmii_phy1: phy@1 {
+        compatible = "ethernet-phy-ieee802.3-c22";
+        reg = <0x1>;
+    };
+};
+
 &pcie2x1l2 {
 	reset-gpios = <&gpio3 RK_PD1 GPIO_ACTIVE_HIGH>;
 	rockchip,skip-scan-in-resume;
@@ -550,6 +562,23 @@
 	status = "okay";
 	pinctrl-names = "active";
 	pinctrl-0 = <&pwm14m1_pins>;
+};
+
+&sdio {
+	max-frequency = <100000000>;
+	no-sd;
+	no-mmc;
+	bus-width = <4>;
+	disable-wp;
+	cap-sd-highspeed;
+	cap-sdio-irq;
+	keep-power-in-suspend;
+	mmc-pwrseq = <&sdio_pwrseq>;
+	non-removable;
+	pinctrl-names = "default";
+	pinctrl-0 = <&sdiom1_pins>;
+	sd-uhs-sdr104;
+	status = "okay";
 };
 
 &sdmmc {
