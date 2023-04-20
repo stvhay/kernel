@@ -566,24 +566,6 @@
 	};
 };
 
-&i2c4 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&i2c4m3_xfer>;
-
-	gslx680@40 {
-		compatible = "9tripod,gslx680";
-		reg = <0x40>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&tp_irq_gpio &tp_rst_gpio>;
-		touch-gpio = <&gpio0 RK_PD5 IRQ_TYPE_EDGE_RISING>;
-		reset-gpio = <&gpio3 RK_PC2 GPIO_ACTIVE_LOW>;
-		max-x = <1024>;
-		max-y = <600>;
-		status = "okay";
-	};
-};
-
 &i2c6 {
 	status = "okay";
 	pinctrl-names = "default";
@@ -998,36 +980,6 @@
 
 &tsadc {
 	status = "okay";
-};
-
-&uart0 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart0m2_xfer>;
-};
-
-&uart3 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart3m0_xfer>;
-};
-
-&uart5 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart5m1_xfer>;
-};
-
-&uart6 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart6m1_xfer>;
-};
-
-&uart7 {
-	status = "disabled";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart7m2_xfer>;
 };
 
 &uart9 {

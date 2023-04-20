@@ -7,8 +7,6 @@
 /dts-v1/;
 
 #include "rk3588s-9tripod-evb.dtsi"
-#include "rk3588s-9tripod-lcd.dtsi"
-#include "rk3588s-9tripod-imx415-dphy0.dtsi"
 #include "rk3588-linux.dtsi"
 
 / {
