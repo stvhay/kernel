@@ -15,3 +15,9 @@
 
 	/delete-node/ chosen;
 };
+
+/* pin 40 pwm fan control */
+&pwm15 {
+        pinctrl-0 = <&pwm15m1_pins>;
+        status = "okay";
+};
