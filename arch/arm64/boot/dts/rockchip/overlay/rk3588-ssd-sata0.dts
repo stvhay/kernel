@@ -1,4 +1,3 @@
-// Orange Pi 5 Pcie M.2 to sata
 /dts-v1/;
 /plugin/;
 
@@ -15,8 +14,7 @@
 		target = <&pcie2x1l2>;
 
 		__overlay__ {
-			status = "okay";
-			wifi_chip_type = "ap6275p";
+			status = "disabled";
 		};
 	};
 };

@@ -11,7 +11,6 @@
 			#size-cells = <0>;
 			pinctrl-names = "default";
 			pinctrl-0 = <&spi4m2_cs0 &spi4m2_pins>;
-			max-freq = <50000000>;
 
 			spidev@0 {
 				compatible = "rockchip,spidev";
