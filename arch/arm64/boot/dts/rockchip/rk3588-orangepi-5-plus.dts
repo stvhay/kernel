@@ -12,8 +12,16 @@
 #include "rk3588-orangepi-5-plus-camera1.dtsi"
 
 / {
-	model = "RK3588 OPi 5 Plus";
+	model = "Orange Pi 5 Plus";
 	compatible = "rockchip,rk3588-orangepi-5-plus", "rockchip,rk3588";
+
+	/delete-node/ chosen;
+
+	aliases {
+		mmc0 = &sdmmc;
+		mmc1 = &sdhci;
+		mmc2 = &sdio;
+	};
 
 	leds: gpio-leds {
 		compatible = "gpio-leds";
