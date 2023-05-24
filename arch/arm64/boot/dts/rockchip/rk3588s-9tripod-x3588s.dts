@@ -13,6 +13,6 @@
 #include "rk3588s-9tripod-x3588s-imx415-dphy0.dtsi"
 
 / {
-	model = "9Tripod X3588S Board";
+	model = "Indiedroid Nova";
 	compatible = "9tripod,rk3588s-9tripod-x3588s", "rockchip,rk3588";
 };

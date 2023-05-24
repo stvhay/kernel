@@ -10,7 +10,7 @@
 #include "rk3588-linux.dtsi"
 
 / {
-	model = "9tripod rk3588s Board";
+	model = "Indiedroid Nova";
 	compatible = "9tripod,rk3588s", "rockchip,rk3588";
 
 	/delete-node/ chosen;
