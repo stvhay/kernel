@@ -41,6 +41,7 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	rk3588-i2c6-m4.dtbo \
 	rk3588-i2c8-m2.dtbo \
 	rk3588-opi5plus-lcd.dtbo \
+	rk3588-opi5plus-disable-leds.dtbo \
 	rk3588-opi5plus-ov13850.dtbo \
 	rk3588-opi5plus-ov13855.dtbo \
 	rk3588-ov13850-c1.dtbo \
