@@ -21,8 +21,6 @@
 
 #include <linux/kernel.h>
 #include <linux/module.h>
-#include <linux/netdevice.h>
-#include <linux/of_device.h>
 #include <linux/phy.h>
 #include <linux/motorcomm_phy.h>
 #include <linux/of.h>
@@ -1079,11 +1077,23 @@ static int yt8614_read_status(struct phy_device *phydev)
 	if (ret < 0)
 		return ret;
 
-	/* RXC, PHY_CLK_OUT and RXData Drive strength:
-	 * Drive strength of RXC = 6, PHY_CLK_OUT = 3, RXD0 = 4 (default 1.8v)
-	 * If the io voltage is 3.3v, PHY_CLK_OUT = 2, set 0xa010 = 0xdacf
-	 */
-	ret = ytphy_write_ext(phydev, 0xa010, 0xdbcf);
+	val = phy_read(phydev, REG_PHY_SPEC_STATUS);
+	if (val < 0)
+		return val;
+
+	link = val & (BIT(YT8521_LINK_STATUS_BIT));
+	if (link) {
+		link_utp = 1;
+		// here is same as 8521 and re-use the function;
+		yt8521_adjust_status(phydev, val, 1);  
+	} else {
+		link_utp = 0;
+	}
+#endif //(YT8614_PHY_MODE_CURR != YT8521_PHY_MODE_FIBER)
+
+#if (YT8614_PHY_MODE_CURR != YT8521_PHY_MODE_UTP)
+	/* reading Fiber/sgmii */
+	ret = ytphy_write_ext(phydev, 0xa000, 3);
 	if (ret < 0)
 		return ret;
 
