@@ -829,7 +829,6 @@ static void dwc3_ep0_inspect_setup(struct dwc3 *dwc,
 	struct dwc3_vendor *vdwc = container_of(dwc, struct dwc3_vendor, dwc);
 	int ret = -EINVAL;
 	u32 len;
-	struct dwc3_vendor	*vdwc = container_of(dwc, struct dwc3_vendor, dwc);
 
 	if (!dwc->gadget_driver || !vdwc->softconnect || !dwc->connected)
 		goto out;
