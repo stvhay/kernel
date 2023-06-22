@@ -6,3 +6,4 @@ obj-$(CONFIG_INFINEON_DHD)	+= infineon/
 obj-$(CONFIG_RTL8852BE)		+= rtl8852be/
 obj-$(CONFIG_RTL8852BU)		+= rtl8852bu/
 obj-$(CONFIG_RTL8821CS) 	+= rtl8821cs/
+obj-$(CONFIG_RTL8821CU_RK)	+= rtl8821cu/
